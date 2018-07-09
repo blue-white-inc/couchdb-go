@@ -28,5 +28,5 @@ func New(host string, client HTTPExecutor, configs ...func(*Client) error) (*Cli
 	c.Replications = &ReplicationService{c}
 	c.Sessions = &SessionService{c}
 	c.Cluster = &ClusterService{c}
-	return c, c.Check()
+	return c, nil
 }
